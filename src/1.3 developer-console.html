@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Learning JavaScript</title>
+  </head>
+  <body>
+    <!-- <div id="result"></div> -->
+    <div class="container_pages">
+      <section class="section-editor">
+        <a href="home-page.html"
+          ><img class="main-icon" src="video/output-js.gif" alt=""
+        /></a>
+        <div class="interactive-platform margin-bottom-30px">
+          <h1 class="title-first margin-bottom-10px">Консоль разработчика</h1>
+          <p class="paragraph margin-bottom-30px">
+            Консоль разработчика в JavaScript, также известная как инструменты
+            разработчика или devtools, является мощным инструментом для отладки,
+            профилирования и анализа кода в браузере.
+          </p>
+
+          <h2 class="title-secondary margin-bottom-10px">
+            Открытие консоли разработчика
+          </h2>
+          <div class="Integrated-environment">
+            <p class="paragraph margin-bottom-10px">
+              В большинстве современных браузеров, включая: <br />
+              &bull; Google Chrome <br />
+              &bull; Firefox <br />
+              &bull; Safari <br />
+              &bull; Microsoft Edge <br />
+              &bull; Yandex <br />
+              Консоль разработчика можно открыть, нажав клавишу
+              <span class="text-frame">F12</span> или сочетание клавиш
+              <span class="text-frame">Ctrl+Shift+I</span>, для Mac
+              <span class="text-frame">Cmd+Opt+I</span> .
+            </p>
+            <p class="paragraph margin-bottom-10px">
+              В браузерах также можно открыть консоль разработчика, щелкнув
+              правой кнопкой мыши на странице и выбрав "Inspect" - "Исследовать
+              элемент" из контекстного меню.
+            </p>
+            <img
+              class="console-gif margin-bottom-30px"
+              src="video/developer-console.gif"
+              alt=""
+            />
+            <h2 class="title-secondary margin-bottom-10px">
+              Использование консоли для отладки
+            </h2>
+            <p class="paragraph margin-bottom-5px">
+              Консоль разработчика предоставляет доступ к выводу ошибок
+              JavaScript, предупреждений и логов.
+            </p>
+            <p class="paragraph margin-bottom-15px">
+              Ошибки и предупреждения обычно выделяются цветом и сопровождаются
+              ссылкой на строку кода, где произошла проблема.
+            </p>
+            <p class="paragraph margin-bottom-5px">
+              <span class="text-italic">Откройте страницу</span>
+              <a class="link" href="bug-test-in-1.3.html">скрипт</a>.
+            </p>
+            <p class="paragraph margin-bottom-10px">
+              В её JavaScript-коде закралась ошибка. Она не видна обычному
+              посетителю, поэтому давайте найдём её при помощи инструментов
+              разработки.
+            </p>
+            <img
+              class=" error-scrin margin-bottom-15px"
+              src="img/error-script.png"
+              alt="скрин ошибки скрипта"
+            />
+            <p class="paragraph margin-bottom-10px">
+              Точный внешний вид инструментов разработки зависит от используемой
+              версии Chrome. Время от времени некоторые детали изменяются, но в
+              целом внешний вид остаётся примерно похожим на предыдущие версии.
+            </p>
+            <p class="paragraph margin-bottom-10px">
+                &bull; В консоли мы можем увидеть сообщение об ошибке,
+                отрисованное красным цветом. В нашем случае скрипт содержит
+                неизвестную команду <span class="text-highlighting ">«bim»</span>. <br />
+                &bull; Справа присутствует ссылка на исходный код <span class="text-highlighting ">bug-test-in-1.3html:10</span> с
+                номером строки кода, в которой эта ошибка и произошла. <br />
+              </p>
+            <p class="paragraph margin-bottom-5px">
+              В консоли можно выполнять
+              <span class="text-strong">JavaScript-код</span>, чтобы проверить
+              или изменить состояние страницы в реальном времени.
+            </p>
+          </div>
+        </div>
+        <div class="transition-navigate">
+          <a href="1.2 code-editor.html" class="btn-text"> &larr; Редакторы кода </a>
+          <a href="2.1 Welcome-to-js.html" class="btn-text"
+            >Новый раздел &rarr;</a
+          >
+        </div>
+      </section>
+
+      <div class="main"></div>
+
+    </div>
+  </body>
+</html>

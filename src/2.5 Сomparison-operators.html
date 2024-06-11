@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Learning JavaScript</title>
+  </head>
+  <body>
+    <!-- <div id="result"></div> -->
+    <div class="container_pages">
+      <section class="section-editor">
+        <a href="home-page.html"
+          ><img class="main-icon" src="video/output-js.gif" alt=""
+        /></a>
+        <div class="interactive-platform margin-bottom-30px">
+          <h1 class="title-first margin-bottom-10px">Операторы сравнения</h1>
+          <p class="paragraph margin-bottom-15px">
+            Многие операторы сравнения известны нам из математики.
+          </p>
+          <p class="paragraph margin-bottom-15px">
+            В JavaScript они записываются так:
+          </p>
+          <li class="point-paragraph margin-bottom-10px">
+            <span
+              >Больше/меньше <code class="text-highlighting">a &gt; b </code>,
+              <code class="text-highlighting">a &lt; b </code>.</span
+            >
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span
+              >Больше/меньше или равно:
+              <code class="text-highlighting">a &gt;= b </code>,
+              <code class="text-highlighting">a &lt;= b </code>.</span
+            >
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span
+              >Равно: <code class="text-highlighting">a == b </code> Обратите
+              внимание, для сравнения используется двойной знак равенства
+              <code class="text-highlighting">==</code>. Один знак равенства
+              <code class="text-highlighting">a = b</code> означал бы
+              присваивание.</span
+            >
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span
+              >Не равно. В математике обозначается символом
+              <code class="text-highlighting"> &ne;</code>, но в JavaScript
+              записывается как
+              <code class="text-highlighting">a != b</code>.</span
+            >
+          </li>
+
+          <p class="paragraph margin-bottom-30px">
+            Операторы сравнения в JavaScript используются для сравнения
+            значений. Они возвращают логическое значение (true или false),
+            которое указывает, удовлетворяет ли сравнение определенному условию.
+          </p>
+
+          <h2 class="title-secondary margin-bottom-10px">
+            Результат сравнения имеет логический тип
+          </h2>
+          <p class="paragraph margin-bottom-15px">
+            Все операторы сравнения возвращают значение логического типа:
+          </p>
+          <li class="point-paragraph margin-bottom-10px">
+            <span
+              ><code class="text-highlighting">true</code> – означает «да»,
+              «верно», «истина».</span
+            >
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span
+              ><code class="text-highlighting">false</code> – означает «нет»,
+              «неверно», «ложь»..</span
+            >
+          </li>
+          <p class="paragraph margin-bottom-20px">Например:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="token-number">2</code><code class="token-variables"> &gt; </code><code class="token-number">1</code>); <code class="token-comment">// true (верно) </code></code>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="token-number">2</code><code class="token-variables"> == </code><code class="token-number">1</code>); <code class="token-comment">// false (неверно) </code></code>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="token-number">2</code><code class="token-variables"> != </code><code class="token-number">1</code>); <code class="token-comment">// true (верно) </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-20px">
+            Результат сравнения можно присвоить переменной, как и любое
+            значение:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> result <code class="token-variables">=</code> <code class="token-number">5</code><code class="token-variables"> &gt; </code><code class="token-number">4</code>;</code>
+<code class="language-markup"><code class="token-function">alert</code>(result); <code class="token-comment">// true (верно) </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title-secondary">Сравнение строк</h2>
+          <p class="paragraph margin-bottom-15px">
+            Чтобы определить, что одна строка больше другой, JavaScript
+            использует «алфавитный» или «лексикографический» порядок.
+          </p>
+          <p class="paragraph margin-bottom-15px">
+            Другими словами, строки сравниваются посимвольно.
+          </p>
+          <p class="paragraph margin-bottom-20px">Например:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="text-in-code">"Я"</code><code class="token-variables"> &gt; </code><code class="text-in-code">"А"</code>); <code class="token-comment">// true (верно) </code></code>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="text-in-code">"Коты"</code><code class="token-variables"> &gt; </code><code class="text-in-code">"Коды"</code>); <code class="token-comment">// true (верно) </code></code>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="text-in-code">"Сонный"</code><code class="token-variables"> &gt; </code><code class="text-in-code">"Сон"</code>); <code class="token-comment">// true (верно) </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-15px">
+            Алгоритм сравнения двух строк довольно прост:
+          </p>
+          <p class="paragraph margin-bottom-20px">
+            1. Сначала сравниваются первые символы строк. <br />
+            2. Если первый символ первой строки больше (меньше), чем первый
+            символ второй, то первая строка больше (меньше) второй. Сравнение
+            завершено. <br />
+            3. Если первые символы равны, то таким же образом сравниваются уже
+            вторые символы строк. <br />
+            4. Сравнение продолжается, пока не закончится одна из строк. <br />
+            5. Если обе строки заканчиваются одновременно, то они равны. Иначе,
+            большей считается более длинная строка
+          </p>
+
+          <p class="paragraph margin-bottom-20px">
+            В примерах выше сравнение Больше/меньше или равно:
+            <code class="text-highlighting">"А" &gt; "Я" </code>. завершится на
+            первом шаге, тогда как строки
+            <code class="text-highlighting">"Коты"</code> и
+            <code class="text-highlighting">"Кода"</code> будут сравниваться
+            посимвольно:
+          </p>
+
+          <p class="paragraph margin-bottom-20px">
+            1. <code class="text-highlighting">K</code> равна
+            <code class="text-highlighting">K</code>. <br />
+            2. <code class="text-highlighting">о</code> равна
+            <code class="text-highlighting">о</code>. <br />
+            3. <code class="text-highlighting">т</code> больше, чем
+            <code class="text-highlighting">д</code>. На этом сравнение
+            заканчивается. Первая строка больше.
+          </p>
+          <div class="info-box margin-bottom-20px">
+            <div class="info-box__title-box margin-bottom-10px">
+              <img
+                class="info-box__img margin-right-10px"
+                src="icons/icon-info.svg"
+                alt=""
+              />
+              <h3 class="title-therd">
+                Используется кодировка Unicode, а не настоящий алфавит
+              </h3>
+            </div>
+            <p class="paragraph margin-bottom-15px">
+              Приведённый выше алгоритм сравнения похож на алгоритм,
+              используемый в словарях и телефонных книгах, но между ними есть и
+              различия.
+            </p>
+            <p class="paragraph margin-bottom-15px">
+              Например, в JavaScript имеет значение регистр символов. Заглавная
+              буква <code class="text-highlighting">"А"</code> не равна строчной
+              <code class="text-highlighting">"а"</code>. Какая же из них
+              больше? Строчная <code class="text-highlighting">"а"</code>.
+              Почему? Потому что строчные буквы имеют больший код во внутренней
+              таблице кодирования, которую использует JavaScript (Unicode). Мы
+              ещё поговорим о внутреннем представлении строк и его влиянии в
+              главе <a class="link" href="#">Строки</a>.
+            </p>
+          </div>
+
+          <h2 class="title margin-bottom-10px">Сравнение разных типов</h2>
+          <p class="paragraph margin-bottom-15px">
+            При сравнении значений разных типов JavaScript приводит каждое из
+            них к числу.
+          </p>
+          <p class="paragraph margin-bottom-15px">Например:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="text-in-code">"2"</code> <code class="token-variables">&gt;</code> <code class="token-number">1</code>); <code class="token-comment">// true, строка '2' становится числом 2 </code></code>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="text-in-code">"01"</code> <code class="token-variables">==</code> <code class="token-number">1</code>); <code class="token-comment">// true, строка '01' становится числом 1 </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-15px">
+            Логическое значение true становится
+            <code class="text-highlighting">1</code>, а
+            <code class="text-highlighting">false</code> –
+            <code class="text-highlighting">0</code>.
+          </p>
+          <p class="paragraph margin-bottom-20px">Например:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-function">alert</code>(true <code class="token-variables">==</code> <code class="token-number">1</code>);<code class="token-comment"> // true </code></code>
+<code class="language-markup"><code class="token-function">alert</code>(false <code class="token-variables">==</code> <code class="token-number">0</code>);<code class="token-comment"> // true</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="block-line" />
+        <div class="tasks">
+          <div class="tasks__box margin-bottom-15px">
+            <i class="tasks__icon bx bxs-check-circle margin-right-5px"></i>
+            <h2 class="title-secondary">Задачи</h2>
+          </div>
+          <div class="level-1">
+            <button class="btn-below margin-bottom-15px">Уровень 1</button>
+            <div class="tasks-list level-1-tasks" style="display: none">
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  1. Какой результат вернёт выражение <code>5 &gt; 3</code>?
+                </p>
+                <input class="check-mark" type="radio" name="q1" value="a" /> a)
+                true<br />
+                <input class="check-mark" type="radio" name="q1" value="b" /> б)
+                false<br />
+                <input class="check-mark" type="radio" name="q1" value="c" /> в)
+                undefined<br />
+                <input class="check-mark" type="radio" name="q1" value="d" /> г)
+                null<br />
+                <button class="check-btn" data-correct="a">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  2. Какой результат вернёт выражение <code>"7" == 7</code>?
+                </p>
+                <input class="check-mark" type="radio" name="q2" value="a" /> a)
+                true<br />
+                <input class="check-mark" type="radio" name="q2" value="b" /> б)
+                false<br />
+                <input class="check-mark" type="radio" name="q2" value="c" /> в)
+                undefined<br />
+                <input class="check-mark" type="radio" name="q2" value="d" /> г)
+                null<br />
+                <button class="check-btn" data-correct="a">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  3. Какой результат вернёт выражение
+                  <code>"apple" &gt; "banana"</code>?
+                </p>
+                <input class="check-mark" type="radio" name="q3" value="a" /> a)
+                true<br />
+                <input class="check-mark" type="radio" name="q3" value="b" /> б)
+                false<br />
+                <input class="check-mark" type="radio" name="q3" value="c" /> в)
+                undefined<br />
+                <input class="check-mark" type="radio" name="q3" value="d" /> г)
+                null<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+            </div>
+          </div>
+          <div class="level-2">
+            <button class="btn-below margin-bottom-15px">Уровень 2</button>
+            <div class="tasks-list level-2-tasks" style="display: none">
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-10px">
+                  Напишите код, который сравнивает два числа и выводит результат
+                  сравнения в консоль.
+                </p>
+                <textarea
+                  class="paragraph entering-code margin-bottom-10px"
+                  id="code"
+                  rows="4"
+                  cols="50"
+                >
+// Ваш JavaScript код здесь</textarea
+                ><br />
+                <button class="btn-below-code check-btn__code">
+                  Узнать правильный ответ
+                </button>
+                <div class="tasks-list level-2-tasks" style="display: none">
+                  <div class="code-example" style="margin: 0">
+                    <div class="code-box margin-bottom-15px">
+                      <div class="column-numbers">
+                        <span class="line-numbers-rows"
+                          ><span>1</span><span>2</span><span>3</span
+                          ><span>4</span><span>5</span></span
+                        >
+                      </div>
+                      <div class="code-text">
+                        <code class="language-markup">
+                          <code class="token-variables">let</code> a =
+                          <code class="token-number">5</code>;<br />
+                          <code class="token-variables">let</code> b =
+                          <code class="token-number">3</code>;<br />
+                          <code class="token-function">console</code>.<code
+                            class="token-method"
+                            >log</code
+                          >(a &gt; b); <span class="text-comment">// true</span
+                          ><br />
+                          <code class="token-function">console</code>.<code
+                            class="token-method"
+                            >log</code
+                          >(a &lt; b); <span class="text-comment">// false</span
+                          ><br />
+                          <code class="token-function">console</code>.<code
+                            class="token-method"
+                            >log</code
+                          >(a == b); <span class="text-comment">// false</span
+                          ><br />
+                        </code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-10px">
+                  Напишите код, который сравнивает две строки и выводит
+                  результат сравнения в консоль.
+                </p>
+                <textarea
+                  class="paragraph entering-code margin-bottom-10px"
+                  id="code2"
+                  rows="4"
+                  cols="50"
+                >
+  // Ваш JavaScript код здесь</textarea
+                ><br />
+                <button class="btn-below-code check-btn__code">
+                  Узнать правильный ответ
+                </button>
+                <div class="tasks-list level-2-tasks" style="display: none">
+                  <div class="code-example" style="margin: 0">
+                    <div class="code-box margin-bottom-15px">
+                      <div class="column-numbers">
+                        <span class="line-numbers-rows"
+                          ><span>1</span><span>2</span><span>3</span
+                          ><span>4</span><span>5</span></span
+                        >
+                      </div>
+                      <div class="code-text">
+                        <code class="language-markup">
+                          <code class="token-variables">let</code> str1 =
+                          <code class="text-in-code">"apple"</code>;<br />
+                          <code class="token-variables">let</code> str2 =
+                          <code class="text-in-code">"banana"</code>;<br />
+                          <code class="token-function">console</code>.<code
+                            class="text-in-code"
+                            >log</code
+                          >(str1 &gt; str2);
+                          <span class="text-comment">// false</span><br />
+                          <code class="token-function">console</code>.<code
+                            class="text-in-code"
+                            >log</code
+                          >(str1 &lt; str2);
+                          <span class="text-comment">// true</span><br />
+                          <code class="token-function">console</code>.<code
+                            class="text-in-code"
+                            >log</code
+                          >(str1 == str2);
+                          <span class="text-comment">// false</span><br />
+                        </code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="level-3">
+              <button class="btn-below margin-bottom-15px">Уровень 3</button>
+              <div class="tasks-list level-3-tasks" style="display: none">
+                <div class="question margin-bottom-20px">
+                  <p class="paragraph margin-bottom-10px">
+                    Каким будет результат этих выражений? Заполните ваши ответы.
+                  </p>
+                  <p class="paragraph margin-bottom-5px">1. 5 &gt; 4</p>
+                  <input
+                    class="entering-code margin-bottom-10px"
+                    type="text"
+                    name="q1"
+                  /><br />
+                  <p class="paragraph margin-bottom-5px">
+                    2. "ананас" &gt; "яблоко"
+                  </p>
+                  <input
+                    class="entering-code margin-bottom-10px"
+                    type="text"
+                    name="q2"
+                  /><br />
+                  <p class="paragraph margin-bottom-5px">3. "2" &gt; "12"</p>
+                  <input
+                    class="entering-code margin-bottom-10px"
+                    type="text"
+                    name="q3"
+                  /><br />
+                  <p class="paragraph margin-bottom-5px">
+                    4. undefined == null
+                  </p>
+                  <input
+                    class="entering-code margin-bottom-10px"
+                    type="text"
+                    name="q4"
+                  /><br />
+                  <p class="paragraph margin-bottom-5px">
+                    5. undefined === null
+                  </p>
+                  <input
+                    class="entering-code margin-bottom-10px"
+                    type="text"
+                    name="q5"
+                  /><br />
+                  <p class="paragraph margin-bottom-5px">6. null == "\n0\n"</p>
+                  <input
+                    class="entering-code margin-bottom-10px"
+                    type="text"
+                    name="q6"
+                  /><br />
+                  <p class="paragraph margin-bottom-5px">
+                    7. null === +"\n0\n"
+                  </p>
+                  <input
+                    class="entering-code margin-bottom-15px"
+                    type="text"
+                    name="q7"
+                  /><br />
+                  <button class="btn-below-code check-btn__code">
+                    Узнать правильный ответ
+                  </button>
+                  <div class="tasks-list level-3-tasks" style="display: none">
+                    <div class="code-example" style="margin: 0">
+                      <div class="code-box margin-bottom-15px">
+                        <div class="column-numbers">
+                          <span class="line-numbers-rows">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                          </span>
+                        </div>
+                        <div class="code-text">
+                          <pre>
+<code class="language-markup">
+<code class="token-number">5</code> &gt; <code class="token-number">4</code> <span class="token-comment">// true</span>
+<code class="text-in-code">"ананас"</code> &gt; <code class="text-in-code">"яблоко"</code> <span class="token-comment">// false</span>
+<code class="text-in-code">"2"</code> &gt; <code class="text-in-code">"12"</code> <span class="token-comment">// true</span>
+<code class="token-variables">undefined</code> == <code class="token-variables">null</code> <span class="token-comment">// true</span>
+<code class="token-variables">undefined</code> === <code class="token-variables">null</code> <span class="token-comment">// false</span>
+<code class="token-variables">null</code> == <code class="text-in-code">"\n0\n"</code> <span class="token-comment">// false</span>
+<code class="token-variables">null</code> === <code class="token-operator">+</code><code class="text-in-code">"\n0\n"</code> <span class="token-comment">// false</span></code>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="transition-navigate">
+            <a href="2.1 Welcome-to-js.html" class="btn-text">
+              &larr; Добро пожаловать в js
+            </a>
+            <a href="#" class="btn-text">Типы данных &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="main"></div>
+    </div>
+    <script src="js/code-to-copy1.js"></script>
+    <script src="js/_btn-below.js"></script>
+    <script src="js/answer-option.js"></script>
+    <script src="js/js-tasks-code/script-task1.js"></script>
+  </body>
+</html>
+
+<!-- <div class="code-example">
+  <div class="code-box">
+    <div class="codebox__code" data-code="1">
+      <pre
+        class="line-numbers language-markup"
+        tabindex="0"
+      ><span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+
+      <code class=" language-markup"><code class="token doctype"><code class="token punctuation">&lt;!</code><code class="token doctype-tag">DOCTYPE</code> <code class="token name">HTML</code><code class="token punctuation">&gt;</code></code>
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>html</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>p</code><code class="token punctuation">&gt;</code></code>Перед скриптом...<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>p</code><code class="token punctuation">&gt;</code></code>
+
+<em class="block-highlight">  <code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>script</code><code class="token punctuation">&gt;</code></code><code class="token script"><code class="token language-javascript">
+<code class="token function">alert</code><code class="token punctuation">(</code> <code class="token string">'Привет, мир!'</code> <code class="token punctuation">)</code><code class="token punctuation">;</code>
+</code></code><code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>script</code><code class="token punctuation">&gt;</code></code></em>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>p</code><code class="token punctuation">&gt;</code></code>...После скрипта.<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>p</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>html</code><code class="token punctuation">&gt;</code></code></code></pre>
+
+
+    </div>
+  </div> -->
+<!-- <div class="code-result code-example__result">
+    <iframe
+      name="c6uhwvacl2"
+      class="code-result__iframe"
+      style="height: 100px"
+      src="./Привет, мир!_files/saved_resource.html"
+    ></iframe>
+  </div>
+</div> -->

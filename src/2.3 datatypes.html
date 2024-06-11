@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Learning JavaScript</title>
+  </head>
+  <body>
+    <!-- <div id="result"></div> -->
+    <div class="container_pages">
+      <section class="section-editor">
+        <a href="home-page.html"
+          ><img class="main-icon" src="video/output-js.gif" alt=""
+        /></a>
+        <div class="interactive-platform margin-bottom-30px">
+          <h1 class="title-first margin-bottom-10px">Типы данных</h1>
+          <p class="paragraph margin-bottom-15px">
+            Значение в JavaScript всегда имеет определённый тип. Например, строка или число. В JavaScript существует восемь основных типов данных. Здесь мы рассмотрим их в общих чертах, а в следующих главах поговорим о каждом из них подробнее.
+          </p>
+          <p class="paragraph margin-bottom-15px">
+            Мы можем поместить любой тип в переменную. Например, переменная может в какой-то момент быть строкой, а затем хранить число:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-comment">// no error</code></code>
+<code class="language-markup"><code class="token-variables">let </code>massage <code class ="token-variables"> =</code><code class="text-in-code">"hello"</code><code class="token-punctuation">;</code></code>
+<code class="language-markup">massage<code class="token-variables"> = <code class="token-number">12345</code>;</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-30px">
+            Языки программирования, которые допускают такие вещи, такие как JavaScript, называются “динамически типизированными”, что означает, что существуют типы данных, но переменные не привязаны ни к одному из них.
+          </p>
+
+          <h2 class="title-secondary margin-bottom-10px">
+            Числа
+          </h2>
+          <p class="paragraph margin-bottom-15px">
+            Тип <code class="text-highlighting">number</code> представляет как целые числа, так и числа с плавающей запятой.
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> message <code class="token-variables">= <code class="token-number">123</code><code class="token-punctuation">;</code></code></code>
+<code class="language-markup">n <code class="token-variables">= <code class="token-number">12.345</code></code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-15px">
+            Существует множество операций с числами, например, умножение <code class="text-highlighting">*</code>, деление <code class="text-highlighting">/</code>, сложение <code class="text-highlighting">+</code>, вычитание <code class="text-highlighting">-</code> и так далее.
+          </p>
+          <p class="paragraph margin-bottom-15px">
+            Помимо обычных чисел, существуют так называемые “специальные числовые значения”, которые также принадлежат этому типу данных: <code class="text-highlighting">Infinity</code>, <code class="text-highlighting">-Infinity</code> и <code class="text-highlighting">NaN</code>.
+          </p>
+          <p class="paragraph margin-bottom-20px">1. <code class="text-highlighting">Infinity</code>представляет математическую бесконечность ∞. Это специальное значение, которое больше любого числа. Мы можем получить это в результате деления на ноль:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-20px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <code class="language-markup"
+                  ><code class="token-function">alert</code>(<code class="token-number">1</code><code class="token-variables">/</code><code class="token-number">0</code>);<code class="token-comment"> /Infinity</code></code
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-15px">Или просто ссылайтесь на него напрямую:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-20px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <code class="language-markup"
+                  ><code class="token-function">alert</code>(<code class="token-number">Infinity</code>);<code class="token-comment"> /Infinity</code></code
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">2. <code class="text-highlighting">NaN</code>представляет вычислительную ошибку. Это результат неправильной или неопределенной математической операции, например:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-20px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <code class="language-markup"
+                  ><code class="token-function">alert</code>(<code class="text-in-code">"not a number"</code><code class="token-variables">/</code><code class="token-number">2</code>);<code class="token-comment"> /NaN</code></code
+                >
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title-secondary margin-bottom-10px">Строка</h2>
+          <p class="paragraph margin-bottom-20px">
+            Тип <code class="text-highlighting">string</code> используется для представления текстовых данных. Строки должны быть заключены в кавычки: одинарные, двойные или обратные (для шаблонных строк).
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> str <code class="token-variables">= </code><code class="text-in-code">"Привет!"</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> str2 <code class="token-variables">= </code><code class="text-in-code">'Одиночные кавычки тоже подойдут'</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> phrase <code class="token-variables">= </code><code class="text-in-code">`Обратные кавычки позволяют встраивать переменные</code> <code class="token-variables">${</code>str<code class="token-variables">}</code><code class="text-in-code">`</code>;</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-15px">Двойные и одинарные кавычки - это “простые” кавычки. В JavaScript между ними практически нет разницы.</p>
+          <p class="paragraph margin-bottom-20px">Шаблонные строки, заключённые в обратные кавычки, могут содержать выражения, которые будут вычислены и вставлены в строку, заключая их в <code class="text-highlighting">${…}</code>:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup">name <code class="token-variables">=</code><code class="text-in-code"> "John"</code>; </code>
+<code class="language-markup"><code class="token-function">alert</code> <code class="token-variables">=</code><code class="text-in-code"> `Привет,</code><code class="token-variables">${</code>name<code class="token-variables">}</code><code class="text-in-code">`</code>; <code class="token-comment">// Привет, John!</code> </code>    
+</pre>
+              </div>
+            </div>
+            <div
+              class="btn-copy"
+              title="Cкопировать"
+              onclick="copyCodeToClipboard(this)"
+            >
+              <i class="bx bx-copy"></i>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-15px">Пожалуйста, обратите внимание, что это можно сделать только с помощью обратных ссылок. Другие кавычки не имеют такой функции встраивания!</p>
+
+          <div class="info-box margin-bottom-20px">
+            <div class="info-box__title-box margin-bottom-10px">
+              <img
+                class="info-box__img margin-right-10px"
+                src="icons/icon-info.svg"
+                alt=""
+              />
+              <h3 class="title-therd">
+                Не существует символьного типа
+              </h3>
+            </div>
+            <p class="paragraph margin-bottom-10px">
+              В некоторых языках существует специальный тип “character” для отдельного символа. Например, в языке C и Java он называется “char".
+            </p>
+            <p class="paragraph">
+              В JavaScript такого типа нет. Есть только один тип: <code class="text-highlighting">string</code>. Строка может состоять из нуля символов (быть пустой), одного символа или нескольких из них.
+            </p>
+          </div>
+
+          <h2 class="title-secondary margin-bottom-10px">Boolean (логический тип)</h2>
+          <p class="paragraph margin-bottom-15px">Тип boolean имеет всего два значения: true и false.</p>
+          <p class="paragraph margin-bottom-20px">Этот тип обычно используется для хранения значений “да”/ "нет": <code class="text-highlighting">true</code> означает "да, правильно", а <code class="text-highlighting">false</code> означает “нет, неверно”.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> nameFieldChecked <code class="token-variables">=</code> true; <code class="token-comment">// Да, поле заполнено</code></code>
+
+<code class="language-markup"><code class="token-variables">let</code> ageFieldChecked <code class="token-variables">=</code> false; <code class="token-comment">// Нет, поле не заполнено</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            Булевы значения часто используются в условных операциях:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span
+                  ></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">const</code> age <code class="token-variables">=</code><code class="token-number"> 18</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> isAdult <code class="token-variables">=</code> age <code class="token-variables">&lt;</code><code class="token-number"> 12</code>;</code>
+<code class="language-markup"><code class="token-function">alert</code>(isAdult)<code class="token-punctuation">;<code class="token-comment"> //false </code></code></code>
+</pre>
+              </div>
+            </div>
+            <div
+              class="btn-copy"
+              title="Cкопировать"
+              onclick="copyCodeToClipboard(this)"
+            >
+              <i class="bx bx-copy"></i>
+            </div>
+          </div>
+
+          <h2 class="title-secondary margin-bottom-10px">Значение “null”</h2>
+
+          <p class="paragraph margin-bottom-20px">
+            Специальное значение <code class="text-highlighting"> null </code>представляет собой "ничего", "пусто" или "значение неизвестно".
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> age <code class="token-variables">=</code><code class="token-variables"> null</code>;</code>
+</pre>
+              </div>
+            </div>
+            <div
+              class="btn-copy"
+              title="Cкопировать"
+              onclick="copyCodeToClipboard(this)"
+            >
+              <i class="bx bx-copy"></i>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-15px"><code class="text-highlighting">null</code>  не равен ни одной другой переменной и используется, чтобы явно указать на отсутствие значения.</p>
+          <p class="paragraph margin-bottom-30px">
+            В приведенном выше коде указано, что age неизвестно.
+          </p>
+
+          <h2 class="title-secondary margin-bottom-10px">Значение “undefined”</h2>
+          <p class="paragraph margin-bottom-15px">Тип <code class="text-highlighting">undefined</code>  означает, что переменная была объявлена, но ещё не присвоено значение.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span
+                  ></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> age;</code>
+
+<code class="language-markup"><code class="token-function">alert</code>(age)<code class="token-punctuation">;<code class="token-comment"> //показывает "undefined"</code></code></code>
+</pre>
+              </div>
+            </div>
+            <div
+              class="btn-copy"
+              title="Cкопировать"
+              onclick="copyCodeToClipboard(this)"
+            >
+              <i class="bx bx-copy"></i>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-20px">Технически возможно явное присвоение undefined переменной:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span
+                  ><span>4</span><span>5</span><span>6</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> age <code class="token-variables">=</code> <code class="token-number">52</code>;</code>
+
+<code class="language-markup"><code class="token-comment">// изменяем значение на undefined</code></code>
+<code class="language-markup">age <code class="token-variables">= <code class="token-variables">undefined</code></code><code class="token-punctuation">;</code></code>
+<code class="language-markup"><code class="token-function">alert</code> (age); <code class="token-comment">// "undefined"</code></code>
+
+</pre>
+              </div>
+            </div>
+            <div
+              class="btn-copy"
+              title="Cкопировать"
+              onclick="copyCodeToClipboard(this)"
+            >
+              <i class="bx bx-copy"></i>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-30px">Так делать не рекомендуется. Обычно <code class="text-highlighting">null</code> используется для присвоения переменной «пустого» или «неизвестного» значения, а <code class="text-highlighting">undefined</code> – для проверок, была ли переменная назначена.</p>
+
+          <h2 class="title-secondary margin-bottom-10px">Объекты и символы</h2>
+          <p class="paragraph margin-bottom-15px">Тип <code class="text-highlighting">object</code> (объект) – особенный.</p>
+          <p class="paragraph margin-bottom-15px">Все остальные типы называются «примитивными», потому что их значениями могут быть только простые значения (будь то строка, или число, или что-то ещё). В объектах же хранят коллекции данных или более сложные структуры.
+
+          Объекты занимают важное место в языке и требуют особого внимания.</p>
+
+          <p class="paragraph margin-bottom-30px">Тип <code class="text-highlighting">symbol</code> (символ) используется для создания уникальных идентификаторов в объектах. Мы упоминаем здесь о нём для полноты картины, изучим этот тип после объектов.</p>
+
+          <h2 class="title-secondary margin-bottom-10px">BigInt</h2>
+          <p class="paragraph margin-bottom-20px">Тип <code class="text-highlighting">BigInt</code> представляет целые числа произвольной длины. Чтобы создать значение типа <code class="text-highlighting">BigInt</code> , достаточно добавить <code class="text-highlighting">n</code> в конец числового литерала.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <code class="language-markup"
+                  ><code class="token-variables">const</code> bigInt
+                  <code class="token-variables">=</code
+                  ><code class="token-number">14619540n</code>;</code
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-30px">
+            <code class="text-highlighting">BigInt</code> позволяют безопасно работать с целыми числами, превышающими диапазон, поддерживаемый типом <code class="text-highlighting">number</code>.
+          </p>
+
+          <h2 class="title-secondary margin-bottom-10px">Оператор typeof</h2>
+          <p class="paragraph margin-bottom-15px">
+            Оператор <code class="text-highlighting">typeof</code> возвращает тип аргумента. Это полезно, когда мы хотим обрабатывать значения различных типов по-разному или просто хотим сделать проверку.
+          </p>
+          <p class="paragraph margin-bottom-20px">У него есть две синтаксические формы:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span><span>4</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-comment">// Обычный синтаксис</code></code>
+<code class="language-markup"><code class="token-variables">typeof</code><code class="token-number"> 52 </code><code class="token-comment">// Выведет "number"</code></code>
+<code class="language-markup"><code class="token-comment">// Синтаксис, напоминающий вызов функции (встречается реже)</code></code>
+<code class="language-markup"><code class="token-variables">typeof</code>(<code class="token-number">52</code>)<code class="token-comment">// Также выведет "number"</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-20px">Если передается выражение, то нужно заключать его в скобки, т.к. typeof имеет более высокий приоритет, чем бинарные операторы:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">typeof</code> <code class="token-number">25</code> <code class="token-variables">+</code><code class="text-in-code"> "Машин"</code>; <code class="token-comment">// Выведет "number Машин"</code></code>
+
+<code class="language-markup"><code class="token-variables">typeof</code> (<code class="token-number">25</code> <code class="token-variables">+</code><code class="text-in-code"> "Машин"</code>);<code class="token-comment">// Выведет "string"</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-30px">Другими словами, скобки необходимы для определения типа значения, которое получилось в результате выполнения выражения в них.</p>
+          
+          <h2 class="title-secondary margin-bottom-10px">Пример использования всех типов</h2>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> name <code class="token-variables">=</code><code class="text-in-code"> "Alice"</code>; <code class="token-comment">// Строка</code></code>
+<code class="language-markup"><code class="token-variables">let</code> age <code class="token-variables">=</code> <code class="token-number">25</code>;<code class="token-comment"> // Число</code></code>
+<code class="language-markup"><code class="token-variables">let</code> isStudent <code class="token-variables">=</code> true;<code class="token-comment"> // Булевый</code></code>
+<code class="language-markup"><code class="token-variables">let</code> height <code class="token-variables">=</code> null;<code class="token-comment"> // null</code></code>
+<code class="language-markup"><code class="token-variables">let</code> weight;<code class="token-comment"> // undefined</code></code>
+<code class="language-markup"><code class="token-variables">let</code> id <code class="token-variables">=</code><code class="token-symbol"> Symbol</code>(<code class="text-in-code">"id"</code>);<code class="token-comment"> // Символ</code></code>
+<code class="language-markup"><code class="token-variables">const</code> bigNumber<code class="token-variables">=</code><code class="token-number">14619540n</code>;<code class="token-comment"> // bigInt</code></code>
+<code class="language-markup"><code class="token-variables">let</code> Math <code class="token-comment">// "object"</code></code>
+<code class="language-markup"><code class="token-function">alert</code>(...) <code class="token-comment">// "function"</code></code>
+
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-20px">
+            Эти основные типы данных и операции с ними являются фундаментальными концепциями JavaScript, которые необходимо понять для эффективного программирования на этом языке.
+          </p>
+        </div>
+
+        <hr class="block-line" />
+        <div class="tasks">
+          <div class="tasks__box margin-bottom-15px">
+            <i class="tasks__icon bx bxs-check-circle margin-right-5px"></i>
+            <h2 class="title-secondary">Задачи</h2>
+          </div>
+          <div class="level-1">
+            <button class="btn-below margin-bottom-15px">Уровень 1</button>
+            <div class="tasks-list level-1-tasks" style="display: none">
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  1. Какой тип данных используется для представления текстовых данных в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q1" value="a" /> a) boolean<br />
+                <input class="check-mark" type="radio" name="q1" value="b" /> б) number<br />
+                <input class="check-mark" type="radio" name="q1" value="c" /> в) string<br />
+                <input class="check-mark" type="radio" name="q1" value="d" /> г) object<br />
+                <button class="check-btn" data-correct="c">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  2. Какое значение обозначает "ничего", "пусто" или "значение неизвестно" в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q2" value="a" /> a) undefined<br />
+                <input class="check-mark" type="radio" name="q2" value="b" /> б) null<br />
+                <input class="check-mark" type="radio" name="q2" value="c" /> в) NaN<br />
+                <input class="check-mark" type="radio" name="q2" value="d" /> г) 0<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  3. Какой тип данных может представлять как целые числа, так и числа с плавающей запятой в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q3" value="a" /> a) boolean<br />
+                <input class="check-mark" type="radio" name="q3" value="b" /> б) number<br />
+                <input class="check-mark" type="radio" name="q3" value="c" /> в) string<br />
+                <input class="check-mark" type="radio" name="q3" value="d" /> г) object<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  4. Какой тип данных может содержать уникальные идентификаторы?
+                </p>
+                <input class="check-mark" type="radio" name="q4" value="a" /> a) object<br />
+                <input class="check-mark" type="radio" name="q4" value="b" /> б) symbol<br />
+                <input class="check-mark" type="radio" name="q4" value="c" /> в) function<br />
+                <input class="check-mark" type="radio" name="q4" value="d" /> г) bigint<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  5. Какой тип данных возвращается, если переменная была объявлена, но ещё не присвоено значение?
+                </p>
+                <input class="check-mark" type="radio" name="q5" value="a" /> a) null<br />
+                <input class="check-mark" type="radio" name="q5" value="b" /> б) undefined<br />
+                <input class="check-mark" type="radio" name="q5" value="c" /> в) NaN<br />
+                
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+            </div>
+          </div>
+          <div class="level-2">
+            <button class="btn-below margin-bottom-15px">Уровень 2</button>
+            <div class="tasks-list level-2-tasks" style="display: none">
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-10px">
+                  Напишите код для создания переменной с именем <code class="text-highlighting">message</code> и присвойте ей значение <code class="text-highlighting">"Hello, JavaScript!"</code>, затем выведите это значение с помощью функции <code class="text-highlighting">alert</code>.
+                </p>
+                <textarea
+                  class="paragraph entering-code margin-bottom-10px"
+                  id="code"
+                  rows="4"
+                  cols="50"
+                >
+// Ваш JavaScript код здесь</textarea
+                ><br />
+                <button class="btn-below-code check-btn__code">
+                  Узнать правильный ответ
+                </button>
+                <div class="tasks-list level-2-tasks" style="display: none">
+                  <div class="code-example" style="margin: 0">
+                    <div class="code-box margin-bottom-15px">
+                      <div class="column-numbers">
+                        <span class="line-numbers-rows"><span>1</span><span>2</span></span>
+                      </div>
+                      <div class="code-text">
+                        <code class="language-markup">
+                          <code class="token-variables">let</code> message <code class="token-variables">=</code> <code class="text-in-code">"Hello, JavaScript!"</code><code class="token-punctuation">;</code><br />
+                          <code class="token-function">alert</code>(message)<code class="token-punctuation">;</code>
+                        </code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" margin-bottom-20px">
+                <p class="paragraph margin-bottom-10px">
+                  Создайте переменную <code class="text-highlighting">number</code> и присвойте ей значение <code class="text-highlighting">42</code>. Затем увеличьте её значение на <code class="text-highlighting">8</code> и выведите новое значение с помощью функции <code class="text-highlighting">alert</code>.
+                </p>
+                <textarea
+                  class="paragraph entering-code margin-bottom-10px"
+                  id="code2"
+                  rows="4"
+                  cols="50"
+                >
+// Ваш JavaScript код здесь</textarea
+                ><br />
+                <button class="btn-below-code check-btn__code">
+                  Узнать правильный ответ
+                </button>
+                <div class="tasks-list level-2-tasks" style="display: none">
+                  <div class="code-example" style="margin: 0">
+                    <div class="code-box margin-bottom-15px">
+                      <div class="column-numbers">
+                        <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span></span>
+                      </div>
+                      <div class="code-text">
+                        <code class="language-markup">
+                          <code class="token-variables">let</code> number <code class="token-variables">=</code><code class="token-number"> 42</code><code class="token-punctuation">;</code><br />
+                          <code class="language-markup">number</code> <code class="token-variables">=</code> number <code class="token-variables">+</code> <code class="token-number">8</code><code class="token-punctuation">;</code><br />
+                          <code class="token-function">alert</code>(number)<code class="token-punctuation">;</code>
+                        </code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="transition-navigate">
+            <a href="2.2 Variables.html" class="btn-text">
+              &larr; Что такое переменные ?
+            </a>
+            <a href="2.4 Math-operators.html" class="btn-text">Математические операторы &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="main"></div>
+    </div>
+    <script src="js/code-to-copy1.js"></script>
+    <script src="js/_btn-below.js"></script>
+    <script src="js/answer-option.js"></script>
+    <script src="js/js-tasks-code/script-task1.js"></script>
+  </body>
+</html>
+
+<!-- <div class="code-example">
+  <div class="code-box">
+    <div class="codebox__code" data-code="1">
+      <pre
+        class="line-numbers language-markup"
+        tabindex="0"
+      ><span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+
+      <code class=" language-markup"><code class="token doctype"><code class="token punctuation">&lt;!</code><code class="token doctype-tag">DOCTYPE</code> <code class="token name">HTML</code><code class="token punctuation">&gt;</code></code>
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>html</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>p</code><code class="token punctuation">&gt;</code></code>Перед скриптом...<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>p</code><code class="token punctuation">&gt;</code></code>
+
+<em class="block-highlight">  <code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>script</code><code class="token punctuation">&gt;</code></code><code class="token script"><code class="token language-javascript">
+<code class="token function">alert</code><code class="token punctuation">(</code> <code class="token string">'Привет, мир!'</code> <code class="token punctuation">)</code><code class="token punctuation">;</code>
+</code></code><code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>script</code><code class="token punctuation">&gt;</code></code></em>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>p</code><code class="token punctuation">&gt;</code></code>...После скрипта.<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>p</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>html</code><code class="token punctuation">&gt;</code></code></code></pre>
+
+
+    </div>
+  </div> -->
+<!-- <div class="code-result code-example__result">
+    <iframe
+      name="c6uhwvacl2"
+      class="code-result__iframe"
+      style="height: 100px"
+      src="./Привет, мир!_files/saved_resource.html"
+    ></iframe>
+  </div>
+</div> -->

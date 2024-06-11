@@ -1,0 +1,32 @@
+.section-about
+    padding-bottom: 3.5rem
+    position: relative
+
+.main-icon
+    display: block
+    margin: 0 auto
+    margin-bottom: 2rem
+    @include respond(tab-land)
+      width: 4.6rem
+    @include respond(tab-port)
+      width: 4.5rem
+    @include respond(phone)
+      width: 3.5rem
+    @include respond(big-screen)
+      width: 5rem
+.points
+    display: flex
+    margin-bottom: 20px
+    &__column 
+        flex: 1
+    &:first-child 
+        margin-right: 10px
+    &__item 
+      display: flex
+      align-items: center
+    a 
+        text-decoration: none 
+        color: $color-moon  
+        &:hover 
+            text-decoration: underline
+            color: green

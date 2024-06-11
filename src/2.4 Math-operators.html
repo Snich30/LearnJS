@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Learning JavaScript</title>
+  </head>
+  <body>
+    <!-- <div id="result"></div> -->
+    <div class="container_pages">
+      <section class="section-editor">
+        <a href="home-page.html"
+          ><img class="main-icon" src="video/output-js.gif" alt=""
+        /></a>
+        <div class="interactive-platform margin-bottom-30px">
+          <h1 class="title-first margin-bottom-10px">Математические операторы</h1>
+          <p class="paragraph margin-bottom-15px">
+            Математические операторы в JavaScript позволяют выполнять различные арифметические операции над числами. Это фундаментальная часть языка, которая необходима для выполнения большинства вычислений и манипуляций с данными. В этой главе мы рассмотрим основные математические операторы, а также приведем примеры их использования.
+          </p>
+
+          <h2 class="title-secondary margin-bottom-10px">
+            Основные математические операторы
+          </h2>
+          <p class="paragraph margin-bottom-15px">
+            1. Сложение (<code class="text-highlighting">+</code>)
+            Используется для сложения двух чисел.
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span>4</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> a = <code class="token-number">5</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> b = <code class="token-number">3</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> sum = <code class="token-variables">a</code> + <code class="token-variables">b</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">sum</code>); <code class="token-comment">// 8</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          
+          <p class="paragraph margin-bottom-15px">
+            3. Умножение (<code class="text-highlighting">*</code>) 
+          </p>
+          <p class="paragraph margin-bottom-20px">Используется для умножения двух чисел.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span>4</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">5</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">b</code> = <code class="token-number">3</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">product</code> = <code class="token-variables">a</code> * <code class="token-variables">b</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">product</code>); <code class="token-comment">// 15</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-15px">
+            4. Деление (<code class="text-highlighting">/</code>) 
+          </p>
+          <p class="paragraph margin-bottom-20px">Используется для деления одного числа на другое.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span>4</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">6</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">b</code> = <code class="token-number">3</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">quotient</code> = <code class="token-variables">a</code> / <code class="token-variables">b</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">quotient</code>); <code class="token-comment">// 2</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-15px">
+            5. Остаток от деления (<code class="text-highlighting">%</code>) 
+          </p>
+          <p class="paragraph margin-bottom-20px">Используется для получения остатка от деления одного числа на другое.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span>4</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">7</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">b</code> = <code class="token-number">3</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">remainder</code> = <code class="token-variables">a</code> / <code class="token-variables">b</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">remainder</code>); <code class="token-comment">// 1</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-15px">
+            6. Возведение в степень (<code class="text-highlighting">**</code>) 
+          </p>
+          <p class="paragraph margin-bottom-20px">Используется для возведения числа в степень.В школьной математике мы записываем это как a<sup>b</sup></p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span>4</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">2</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">b</code> = <code class="token-number">3</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">power</code> = <code class="token-variables">a</code> / <code class="token-variables">b</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">power</code>); <code class="token-comment">// 8</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title-secondary margin-bottom-10px">Унарные операторы</h2>
+          <p class="paragraph margin-bottom-15px">Унарным называется оператор, который применяется к одному операнду. Например, оператор унарный минус "-" меняет знак числа на противоположный:</p>
+          <p class="paragraph margin-bottom-15px">
+            1. Инкремент (<code class="text-highlighting">++</code>) 
+          </p>
+          <p class="paragraph margin-bottom-20px">Увеличивает значение переменной на единицу.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">5</code>;</code>
+<code class="language-markup"><code class="token-variable">a++</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 6</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-15px">
+            2. Дикремент (<code class="text-highlighting">--</code>) 
+          </p>
+          <p class="paragraph margin-bottom-20px">Уменьшает значение переменной на единицу.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">5</code>;</code>
+<code class="language-markup"><code class="token-variable">a--</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 4</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <div class="info-box margin-bottom-30px">
+            <div class="info-box__title-box margin-bottom-10px">
+              <img
+                class="info-box__img-war margin-right-10px"
+                src="icons/icon-warning.svg"
+                alt=""
+              />
+              <h3 class="title-therd">
+                Важно!
+              </h3>
+            </div>
+            <p class="paragraph margin-bottom-15px">
+              Инкремент/декремент можно применить только к переменной. Попытка использовать его на значении, типа 5++, приведёт к ошибке.
+            </p>
+          </div>
+          <p class="paragraph margin-bottom-15px">Операторы ++ и -- могут быть расположены не только после, но и до переменной.</p>
+          <li class="point-paragraph margin-bottom-10px">
+            <span>Когда оператор идёт после переменной — это «постфиксная форма»: <code class="text-highlighting">counter++</code>.</span>
+          </li>
+          <li class="point-paragraph margin-bottom-15px">
+            <span>«Префиксная форма» — это когда оператор идёт перед переменной: <code class="text-highlighting">++counter</code>.</span>
+          </li>
+
+          <p class="paragraph margin-bottom-15px">Обе эти инструкции делают одно и то же: увеличивают counter на 1.</p>
+
+
+
+          <h2 class="title-secondary margin-bottom-10px">Приоритет операторов</h2>
+          <p class="paragraph margin-bottom-20px">Важно понимать, что в JavaScript существует определенный порядок выполнения операций, называемый приоритетом операторов. Операции с более высоким приоритетом выполняются раньше операций с более низким приоритетом.</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">5 + 3 * 2</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 11, потому что умножение выполняется раньше сложения </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">Чтобы изменить порядок выполнения операций, можно использовать круглые скобки:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">(5 + 3) * 2</code>;</code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 16, потому что сначала выполняется сложение в скобках </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="paragraph margin-bottom-10px">Сложение строк при помощи бинарного +</h2>
+          <p class="paragraph margin-bottom-15px">Обычно при помощи плюса <code class="text-highlighting">+</code> складывают числа.</p>
+          <p class="paragraph margin-bottom-20px">Но если бинарный оператор <code class="paragraph margin-bottom-20px">+</code> применить к строкам, то он их объединяет в одну:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="text-in-code">"моя"</code> <code class="token-variables">+</code> <code class="text-in-code">"строка"</code>;</code>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="token-variables">a</code>); <code class="token-comment">// моястрока </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-15px">Обратите внимание, если хотя бы один операнд является строкой, то второй будет также преобразован в строку.</p>
+          <p class="paragraph margin-bottom-20px">Например:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="text-in-code">"1"</code> <code class="token-variables">+</code> <code class="token-number">2</code>); <code class="token-comment">// "12" </code></code>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="token-number">2</code> <code class="token-variables">+</code> <code class="text-in-code">"1"</code>); <code class="token-comment">// "21" </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-15px">Как видите, не важно, первый или второй операнд является строкой.</p>
+          <p class="paragraph margin-bottom-20px">Вот пример посложнее:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-function">alert</code>(<code class="token-number">2</code><code class="token-variables">+</code><code class="token-number">2</code><code class="token-variables">+</code><code class="text-in-code">"1"</code>); <code class="token-comment">// // будет "41", а не "221" </code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <p class="paragraph margin-bottom-15px">Здесь операторы работают один за другим. Первый <code class="text-highlighting">+</code> складывает два числа и возвращает <code class="text-highlighting">4</code>, затем следующий <code class="text-highlighting">+</code> объединяет результат со строкой, производя действие <code class="text-highlighting">4 + '1' = '41'</code> .</p>
+          <p class="paragraph margin-bottom-30px">Сложение и преобразование строк — это особенность бинарного плюса +. Другие арифметические операторы работают только с числами и всегда преобразуют операнды в числа.</p>
+
+          <h2 class="title-secondary margin-bottom-10px">Смешанные операторы</h2>
+          <p class="paragraph margin-bottom-20px">Математические операторы могут быть использованы в сочетании с операторами присваивания для упрощения кода.</p>
+          <p class="paragraph margin-bottom-20px">1. Сложение и присваивание (<code class="text-highlighting">+=</code>)</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">5</code>;</code>
+<code class="language-markup"><code class="token-variable">a+=</code><code class="token-number">3</code>;<code class="token-comment">// эквавалентно a = a + 3</code></code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 8</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">2. Вычитание и присваивание (<code class="text-highlighting">-=</code>)</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">5</code>;</code>
+<code class="language-markup"><code class="token-variable">a-=</code><code class="token-number">3</code>;<code class="token-comment">// эквавалентно a = a - 3</code></code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 2</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">3. Умножение и присваивание (<code class="text-highlighting">*=</code>)</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">5</code>;</code>
+<code class="language-markup"><code class="token-variable">a*=</code><code class="token-number">3</code>;<code class="token-comment">// эквавалентно a = a * 3</code></code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 15</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">4. Деление и присваивание (<code class="text-highlighting">/=</code>)</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">6</code>;</code>
+<code class="language-markup"><code class="token-variable">a/=</code><code class="token-number">3</code>;<code class="token-comment">// эквавалентно a = a / 3</code></code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 2</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">5. Остаток от деления и присваивание (<code class="text-highlighting">%=</code>)</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span></span>
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-variable">a</code> = <code class="token-number">7</code>;</code>
+<code class="language-markup"><code class="token-variable">a%=</code><code class="token-number">3</code>;<code class="token-comment">// эквавалентно a = a % 3</code></code>
+<code class="language-markup"><code class="token-function">console.<code class="text-in-code">log</code></code>(<code class="token-variables">a</code>); <code class="token-comment">// 1</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title-secondary margin-bottom-10px">Побитовые операторы</h2>
+          <p class="paragraph margin-bottom-15px">Побитовые операторы работают с 32-разрядными целыми числами (при необходимости приводят к ним), на уровне их внутреннего двоичного представления.</p>
+          <p class="paragraph margin-bottom-15px">Эти операторы не являются чем-то специфичным для JavaScript, они поддерживаются в большинстве языков программирования.</p>
+          <p class="paragraph margin-bottom-20px">Поддерживаются следующие побитовые операторы:</p>
+          <li class="point-paragraph margin-bottom-10px">
+            <span>AND(и) <code class="text-highlighting">( &amp; )</code>.</span>
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span>OR(или) <code class="text-highlighting">( | )</code>.</span>
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span>XOR(побитовое исключающее или) <code class="text-highlighting">(&circ;)</code>.</span>
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span>NOT(не) <code class="text-highlighting">(~)</code>.</span>
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span>LEFT SHIFT(левый сдвиг) <code class="text-highlighting">(&#60;&#60;)</code>.</span>
+          </li>
+          <li class="point-paragraph margin-bottom-10px">
+            <span>RIGHT SHIFT(правый сдвиг) <code class="text-highlighting"> (&#62;&#62;)</code>.</span>
+          </li>
+          
+          <p class="paragraph margin-bottom-30px">Они используются редко, когда возникает необходимость оперировать с числами на очень низком (побитовом) уровне. В ближайшем времени они нам не понадобятся, так как веб-разработчики редко к ним прибегают, хотя в некоторых сферах (например, в криптографии) они полезны.</p>
+
+        </div>
+        
+        <hr class="block-line" />
+        <div class="tasks">
+          <div class="tasks__box margin-bottom-15px">
+            <i class="tasks__icon bx bxs-check-circle margin-right-5px"></i>
+            <h2 class="title-secondary">Задачи</h2>
+          </div>
+          <div class="level-1">
+            <button class="btn-below margin-bottom-15px">Уровень 1</button>
+            <div class="tasks-list level-1-tasks" style="display: none">
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  1. Какой оператор используется для сложения двух чисел в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q1" value="a" /> a) -<br />
+                <input class="check-mark" type="radio" name="q1" value="b" /> б) +<br />
+                <input class="check-mark" type="radio" name="q1" value="c" /> в) *<br />
+                <input class="check-mark" type="radio" name="q1" value="d" /> г) /<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  2. Какой результат выполнения выражения 10 % 3 в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q2" value="a" /> a) 0<br />
+                <input class="check-mark" type="radio" name="q2" value="b" /> б) 1<br />
+                <input class="check-mark" type="radio" name="q2" value="c" /> в) 2<br />
+                <input class="check-mark" type="radio" name="q2" value="d" /> г) 3<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  3. Какой оператор используется для возведения числа в степень в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q3" value="a" /> a) ^<br />
+                <input class="check-mark" type="radio" name="q3" value="b" /> б) **<br />
+                <input class="check-mark" type="radio" name="q3" value="c" /> в) pow<br />
+                <input class="check-mark" type="radio" name="q3" value="d" /> г) exp<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  4. Какой результат выполнения выражения 7 / 2 в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q4" value="a" /> a) 3<br />
+                <input class="check-mark" type="radio" name="q4" value="b" /> б) 3.5<br />
+                <input class="check-mark" type="radio" name="q4" value="c" /> в) 4<br />
+                <input class="check-mark" type="radio" name="q4" value="d" /> г) 3.33<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  5. Какой оператор используется для вычисления остатка от деления двух чисел в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q5" value="a" /> a) /<br />
+                <input class="check-mark" type="radio" name="q5" value="b" /> б) %<br />
+                <input class="check-mark" type="radio" name="q5" value="c" /> в) // <br />
+                <input class="check-mark" type="radio" name="q5" value="d" /> г) div<br />
+                <button class="check-btn" data-correct="b">Проверить</button>
+              </div>
+            </div>
+          </div>
+          <div class="level-2">
+            <button class="btn-below margin-bottom-15px">Уровень 2</button>
+            <div class="tasks-list level-2-tasks" style="display: none">
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-10px">
+                  Напишите код, который выполняет следующие действия:
+                  <ol>
+                    <li>Прибавляет два числа.</li>
+                    <li>Умножает результат на другое число.</li>
+                    <li>Делит полученное значение на еще одно число.</li>
+                    <li>Выводит конечный результат в консоль.</li>
+                  </ol>
+                </p>
+                <textarea
+                  class="paragraph entering-code margin-bottom-10px"
+                  id="code"
+                  rows="4"
+                  cols="50"
+                >
+// Ваш JavaScript код здесь</textarea
+                ><br />
+                <button class="btn-below-code check-btn__code">
+                  Узнать правильный ответ
+                </button>
+                <div class="tasks-list level-2-tasks" style="display: none">
+                  <div class="code-example" style="margin: 0">
+                    <div class="code-box margin-bottom-15px">
+                      <div class="column-numbers">
+                        <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></span>
+                      </div>
+                      <div class="code-text">
+                        <pre>
+<code class="language-markup"><code class="token-variables">let</code> a <code class="token-operator">=</code> <code class="token-number">5</code>;
+<code class="language-markup"><code class="token-variables">let</code> b <code class="token-operator">=</code> <code class="token-number">10</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> c <code class="token-operator">=</code> <code class="token-number">2</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> d <code class="token-operator">=</code> <code class="token-number">4</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> result <code class="token-operator">=</code> ((a <code class="token-operator">+</code> b) <code class="token-operator">*</code> c) <code class="token-operator">/</code> d;</code>
+<code class="token-function">console</code>.<code class="text-in-code">log</code>(<code class="token-variables">result</code>)<code class="token-comment"> // Вывод: 7.5</code></code>
+</pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="level-3">
+              <button class="btn-below margin-bottom-15px">Уровень 3</button>
+              <div class="tasks-list level-3-tasks" style="display: none">
+                <div class="question margin-bottom-20px">
+                  <p class="paragraph margin-bottom-10px">
+                    Напишите код, который выполняет следующие действия:
+                    <ol>
+                      <li>Создает три переменные и присваивает им значения.</li>
+                      <li>Вычисляет сумму всех трех переменных.</li>
+                      <li>Вычисляет произведение всех трех переменных.</li>
+                      <li>Делит произведение на сумму.</li>
+                      <li>Выводит конечный результат в консоль.</li>
+                    </ol>
+                  </p>
+                  <textarea
+                  class="paragraph entering-code margin-bottom-10px"
+                  id="code2"
+                  rows="4"
+                  cols="50"
+                >
+// Ваш JavaScript код здесь</textarea
+                ><br />
+                <button class="btn-below-code check-btn__code">
+                  Узнать правильный ответ
+                </button>
+                  <div class="tasks-list level-3-tasks" style="display: none">
+                    <div class="code-example" style="margin: 0">
+                      <div class="code-box margin-bottom-15px">
+                        <div class="column-numbers">
+                          <span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></span>
+                        </div>
+                        <div class="code-text">
+                          <pre>
+<code class="language-markup"><code class="token-variables">let</code> x <code class="token-operator">=</code> <code class="token-number">8</code>;
+<code class="language-markup"><code class="token-variables">let</code> y <code class="token-operator">=</code> <code class="token-number">12</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> z <code class="token-operator">=</code> <code class="token-number">4</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> sum <code class="token-operator">=</code> x <code class="token-operator">+</code> y <code class="token-operator">+</code> z;</code>
+<code class="language-markup"><code class="token-variables">let</code> product <code class="token-operator">=</code> x <code class="token-operator">*</code> y <code class="token-operator">*</code> z;</code>
+<code class="language-markup"><code class="token-variables">let</code> result <code class="token-operator">=</code> product <code class="token-operator">/</code> sum;</code>
+<code class="token-function">console</code>.<code class="text-in-code">log</code>(<code class="token-variables">result</code>) <code class="token-comment">// Вывод: 4.8</code></code>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+          <div class="transition-navigate">
+            <a href="2.3 datatypes.html" class="btn-text">
+              &larr; Типы данных
+            </a>
+            <a href="#" class="btn-text">Операторы сравнения &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="main"></div>
+    </div>
+    <script src="js/code-to-copy1.js"></script>
+    <script src="js/_btn-below.js"></script>
+    <script src="js/answer-option.js"></script>
+    <script src="js/js-tasks-code/script-task1.js"></script>
+  </body>
+</html>
+
+<!-- <div class="code-example">
+  <div class="code-box">
+    <div class="codebox__code" data-code="1">
+      <pre
+        class="line-numbers language-markup"
+        tabindex="0"
+      ><span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+
+      <code class=" language-markup"><code class="token doctype"><code class="token punctuation">&lt;!</code><code class="token doctype-tag">DOCTYPE</code> <code class="token name">HTML</code><code class="token punctuation">&gt;</code></code>
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>html</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>p</code><code class="token punctuation">&gt;</code></code>Перед скриптом...<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>p</code><code class="token punctuation">&gt;</code></code>
+
+<em class="block-highlight">  <code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>script</code><code class="token punctuation">&gt;</code></code><code class="token script"><code class="token language-javascript">
+<code class="token function">alert</code><code class="token punctuation">(</code> <code class="token string">'Привет, мир!'</code> <code class="token punctuation">)</code><code class="token punctuation">;</code>
+</code></code><code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>script</code><code class="token punctuation">&gt;</code></code></em>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>p</code><code class="token punctuation">&gt;</code></code>...После скрипта.<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>p</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>html</code><code class="token punctuation">&gt;</code></code></code></pre>
+
+
+    </div>
+  </div> -->
+<!-- <div class="code-result code-example__result">
+    <iframe
+      name="c6uhwvacl2"
+      class="code-result__iframe"
+      style="height: 100px"
+      src="./Привет, мир!_files/saved_resource.html"
+    ></iframe>
+  </div>
+</div> -->

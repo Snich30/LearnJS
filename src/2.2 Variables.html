@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Learning JavaScript</title>
+  </head>
+  <body>
+    <!-- <div id="result"></div> -->
+    <div class="container_pages">
+      <section class="section-editor">
+        <a href="home-page.html"
+          ><img class="main-icon" src="video/output-js.gif" alt=""
+        /></a>
+        <div class="interactive-platform margin-bottom-30px">
+          <h1 class="title-first margin-bottom-10px">Переменные</h1>
+          <p class="paragraph margin-bottom-15px">
+            Что же такое переменная и что она из себя представляет?
+          </p>
+          <p class="paragraph margin-bottom-15px">
+            Переменные в JavaScript - это контейнеры, которые содержат значения
+            данных. Они используются для хранения информации, такой как числа,
+            строки, булевы значения, объекты и многое другое. При работе с
+            переменными важно понимать их типы данных, область видимости и
+            правила именования.
+          </p>
+          <p class="paragraph margin-bottom-30px">
+            Давайте рассмотрим это подробнее, начиная с объявления переменных.
+          </p>
+
+          <h2 class="title-secondary margin-bottom-10px">
+            Обьявление переменных
+          </h2>
+          <p class="paragraph margin-bottom-15px">
+            В JavaScript переменные могут быть объявлены с использованием
+            ключевых слов
+            <code class="text-highlighting">let</code> ,
+            <code class="text-highlighting">var</code> и
+            <code class="text-highlighting">const</code>.
+          </p>
+          <p class="paragraph margin-bottom-20px">
+            1. <code class="text-highlighting">var</code> : Это старый способ
+            объявления переменных. Переменные, объявленные с помощью
+            <code class="text-highlighting">var</code> , имеют функциональную
+            область видимости.
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-20px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <code class="language-markup"
+                  ><code class="token-variables">var</code> message;</code
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            2. <code class="text-highlighting">let</code> : Появился в
+            <a
+              class="link"
+              href="https://medium.com/@rogercodes1/what-is-es6-ecmascript-6-the-standard-of-javascript-and-its-features-c05a7d2ccc9d"
+              >ECMAScript 6 (ES6)</a
+            >. Переменные, объявленные с помощью
+            <code class="text-highlighting">let</code> , имеют блочную область
+            видимости.
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-20px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <code class="language-markup"
+                  ><code class="token-variables">let</code> message;</code
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            3. <code class="text-highlighting">const</code> : Также появился в
+            ECMAScript 6. Переменные, объявленные с помощью
+            <code class="text-highlighting">const</code>, имеют блочную область
+            видимости, и их значения нельзя изменить после присвоения.
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <code class="language-markup"
+                  ><code class="token-variables">const</code> message;</code
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="info-box margin-bottom-20px">
+            <div class="info-box__title-box margin-bottom-10px">
+              <img
+                class="info-box__img margin-right-10px"
+                src="icons/icon-info.svg"
+                alt=""
+              />
+              <h3 class="title-therd">
+                Работа с переменной <code class="text-highlighting">let</code>
+              </h3>
+            </div>
+            <p class="paragraph">
+              Есть тонкие различия между
+              <code class="text-highlighting">let</code> и
+              <code class="text-highlighting">var</code> , переменная
+              <code class="text-highlighting">var</code> -
+              <span class="text-italic">почти тоже самое</span>, что и
+              переменная <code class="text-highlighting">let</code> , но суть в
+              том, что оно объявляет переменную, но немного по-другому,
+              «устаревшим» способом.
+            </p>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            Теперь можно поместить в переменную
+            <code class="text-highlighting">let</code> данные (другими словами,
+            определить переменную), используя оператор присваивания
+            <code class="text-highlighting">=</code>:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> message;</code>
+
+<code class="language-markup">message <code class="token-variables">=</code><code class="text-in-code"> 'Привет мир!'</code>; </code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            Строка сохраняется в области памяти, связанной с переменной. Мы
+            можем получить к ней доступ, используя имя переменной:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span
+                  ><span>4</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> message;</code>
+<code class="language-markup">message <code class="token-variables">=</code><code class="text-in-code"> 'Привет мир!'</code>; </code>
+              
+<code class="language-markup"><code class="token-function">alert</code>(massage)<code class="token-punctuation">;<code class="token-comment">//показывает содержимое переменной </code></code></code>
+</pre>
+              </div>
+            </div>
+            <div
+              class="btn-copy"
+              title="Cкопировать"
+              onclick="copyCodeToClipboard(this)"
+            >
+              <i class="bx bx-copy"></i>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            Для краткости можно совместить объявление переменной и запись данных
+            в одну строку:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> message <code class="token-variables">=</code><code class="text-in-code"> 'Привет мир!'</code>;</code>
+
+<code class="language-markup"><code class="token-function">alert</code>(massage)<code class="token-punctuation">;<code class="token-comment">//Привет мир </code></code></code>
+</pre>
+              </div>
+            </div>
+            <div
+              class="btn-copy"
+              title="Cкопировать"
+              onclick="copyCodeToClipboard(this)"
+            >
+              <i class="bx bx-copy"></i>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            Мы также можем объявить несколько переменных в одной строке:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"><span>1</span></span>
+              </div>
+              <div class="code-text">
+                <code class="language-markup"
+                  ><code class="token-variables">let</code> user
+                  <code class="token-variables">=</code
+                  ><code class="text-in-code"> 'John'</code>, age
+                  <code class="token-variables">=</code>
+                  <code class="token-number">23</code>, massege
+                  <code class="token-variables">=</code>
+                  <code class="text-in-code"> 'John'</code>;</code
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-15px">
+            Такой способ может показаться короче, но мы не рекомендуем его. Для
+            лучшей читаемости объявляйте каждую переменную на новой строке.
+          </p>
+          <p class="paragraph margin-bottom-20px">
+            Многострочный вариант немного длиннее, но легче для чтения:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> user <code class="token-variables">=</code><code class="text-in-code"> 'John'</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> age <code class="token-variables">=</code><code class="token-number"> 25</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> message <code class="token-variables">=</code><code class="text-in-code"> 'Hello'</code>;</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            Можно записать короче этот код:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> user <code class="token-variables">=</code><code class="text-in-code"> 'John'</code>;</code>
+  <code class="language-markup">, age <code class="token-variables">=</code><code class="token-number"> 25</code>;</code>
+  <code class="language-markup">, message <code class="token-variables">=</code><code class="text-in-code"> 'Hello'</code>;</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title-secondary margin-bottom-10px">
+            Правила именования переменных
+          </h2>
+          <p class="paragraph margin-bottom-10px">
+            1. Имена переменных могут содержать буквы, цифры, знак подчеркивания
+            <code class="text-highlighting">(_)</code> и знак доллара
+            <code class="text-highlighting">($)</code>. Они не могут начинаться
+            с цифры.
+          </p>
+          <p class="paragraph margin-bottom-10px">
+            2. Имена переменных чувствительны к регистру (age, Age и AGE -
+            разные переменные).
+          </p>
+          <p class="paragraph margin-bottom-30px">
+            3. Имена переменных не должны совпадать с зарезервированными словами
+            JavaScript, такими как
+            <code class="text-highlighting">function</code>,
+            <code class="text-highlighting">let</code>,
+            <code class="text-highlighting">const</code>, и т.д.
+          </p>
+
+          <p class="paragraph margin-bottom-20px">Примеры допустимых имён:</p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> userName;</code>
+<code class="language-markup"><code class="token-variables">let</code> numb123;</code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-15px">
+            Если имя содержит несколько слов, обычно используется верблюжья
+            нотация, то есть, слова следуют одно за другим, где каждое следующее
+            слово начинается с заглавной буквы:
+            <code class="text-highlighting">myVeryLongName</code>.
+          </p>
+          <p class="paragraph margin-bottom-15px">
+            Самое интересное – знак доллара
+            <code class="text-highlighting">'$'</code> и подчёркивание
+            <code class="text-highlighting">'_'</code> также можно использовать
+            в названиях. Это обычные символы, как и буквы, без какого-либо
+            особого значения.
+          </p>
+
+          <p class="paragraph margin-bottom-20px">
+            Эти имена являются допустимыми:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span
+                  ><span>4</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> $ <code class="token-variables">=</code> <code class="token-number">2</code>; <code class="token-comment">// объявили переменную с именем "$"</code> </code>
+<code class="language-markup"><code class="token-variables">let</code> _ <code class="token-variables">=</code> <code class="token-number">4</code>; <code class="token-comment">// объявили переменную с именем "_"</code> </code>
+              
+<code class="language-markup"><code class="token-function">alert</code>($ <code class="token-variables">+</code> _)<code class="token-punctuation">;<code class="token-comment">// 6 </code></code></code>
+</pre>
+              </div>
+            </div>
+            <div
+              class="btn-copy"
+              title="Cкопировать"
+              onclick="copyCodeToClipboard(this)"
+            >
+              <i class="bx bx-copy"></i>
+            </div>
+          </div>
+
+          <p class="paragraph margin-bottom-20px">
+            Примеры неправильных имён переменных:
+          </p>
+          <div class="code-example">
+            <div class="code-box margin-bottom-30px">
+              <div class="column-numbers">
+                <span class="line-numbers-rows"
+                  ><span>1</span><span>2</span><span>3</span></span
+                >
+              </div>
+              <div class="code-text">
+                <pre>
+<code class="language-markup"><code class="token-variables">let</code> <code class="token-number">2</code>a; <code class="token-comment">// не может начинаться с цифры</code></code>
+
+<code class="language-markup"><code class="token-variables">let</code> my<code class="token-variables">-</code>name;<code class="token-comment">// дефис '-' не разрешён в имени</code></code>
+</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-box margin-bottom-20px">
+            <div class="info-box__title-box margin-bottom-10px">
+              <img
+                class="info-box__img margin-right-10px"
+                src="icons/icon-info.svg"
+                alt=""
+              />
+              <h3 class="title-therd">
+                Нелатинские буквы разрешены, но не рекомендуются
+              </h3>
+            </div>
+            <p class="paragraph margin-bottom-20px">
+              Можно использовать любой язык, включая кириллицу или даже
+              иероглифы, например:
+            </p>
+            <div class="code-example__info-box margin-bottom-30px">
+              <div class="code-box">
+                <div class="column-numbers">
+                  <span class="line-numbers-rows"
+                    ><span>1</span><span>2</span></span
+                  >
+                </div>
+                <div class="code-text">
+                  <pre>
+<code class="language-markup"><code class="token-variables">let</code> имя <code class="token-variables">=</code> <code class="text-in-code">'...'</code><code class="token-comment"></code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> 我 <code class="token-variables">=</code> <code class="text-in-code">'...'</code><code class="token-comment"></code>;</code>
+</pre>
+                </div>
+              </div>
+            </div>
+            <p class="paragraph margin-bottom-30px">
+              Технически здесь нет ошибки, такие имена разрешены, но есть
+              международная традиция использовать английский язык в именах
+              переменных. Даже если мы пишем небольшой скрипт, у него может быть
+              долгая жизнь впереди. Людям из других стран, возможно, придётся
+              прочесть его не один раз.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="title-secondary margin-bottom-10px">Константы</h2>
+        <p class="paragraph margin-bottom-20px">
+          Чтобы объявить константную, то есть, неизменяемую переменную,
+          используйте <code class="text-highlighting">const</code> const вместо
+          <code class="text-highlighting">let</code>:
+        </p>
+        <div class="code-example">
+          <div class="code-box margin-bottom-30px">
+            <div class="column-numbers">
+              <span class="line-numbers-rows"><span>1</span></span>
+            </div>
+            <div class="code-text">
+              <code class="language-markup"
+                ><code class="token-variables">const</code> myBirthday
+                <code class="token-variables">=</code
+                ><code class="text-in-code">'01.04.2003'</code>;</code
+              >
+            </div>
+          </div>
+        </div>
+
+        <p class="paragraph margin-bottom-20px">
+          Переменные, объявленные с помощью const, называются «константами». Их
+          нельзя изменить. Попытка сделать это приведёт к ошибке:
+        </p>
+        <div class="code-example">
+          <div class="code-box margin-bottom-30px">
+            <div class="column-numbers">
+              <span class="line-numbers-rows"
+                ><span>1</span><span>2</span><span>3</span></span
+              >
+            </div>
+            <div class="code-text">
+              <pre>
+<code class="language-markup"><code class="token-variables">const</code> myBirthday <code class="token-variables">=</code> <code class="text-in-code">'01.04.2003'</code>;</code>
+
+<code class="language-markup">myBirthday <code class="token-variables">=</code> <code class="text-in-code">'11.01.2005'</code>; <code class="token-comment">// ошибка, константу нельзя перезаписать!</code></code>
+</pre>
+            </div>
+          </div>
+          <div
+            class="btn-copy"
+            title="Cкопировать"
+            onclick="copyCodeToClipboard(this)"
+          >
+            <i class="bx bx-copy"></i>
+          </div>
+        </div>
+
+        <p class="paragraph margin-bottom-30px">
+          Eсли программист уверен, что переменная никогда не будет меняться, он
+          может гарантировать это и наглядно донести до каждого, объявив её
+          через const.
+        </p>
+
+        <h2 class="title-secondary margin-bottom-10px">
+          Придумывайте правильные имена
+        </h2>
+        <p class="paragraph margin-bottom-20px">
+          Правильные имена переменных - ключ к пониманию вашего кода и улучшению
+          его читаемости. Придумывая имена для переменных, функций и других
+          элементов вашего кода, следует придерживаться определенных правил и
+          лучших практик. В этой секции мы рассмотрим, как выбирать подходящие
+          имена и почему это важно для качественной разработки.
+        </p>
+
+        <h3 class="title-therd margin-bottom-10px">
+          Зачем важны правильные имена
+        </h3>
+        <p class="paragraph margin-bottom-10px">
+          1. <span class="text-strong">Читаемость кода:</span> Понятные имена
+          переменных делают ваш код более читаемым для других разработчиков (и
+          для вас самого в будущем). Это упрощает процесс отладки и
+          сопровождения кода.
+        </p>
+        <p class="paragraph margin-bottom-10px">
+          2. <span class="text-strong">Ясность намерений:</span> Имена
+          переменных должны отражать их назначение и намерения. Чем более ясно и
+          точно они описывают предназначение переменной, тем проще понять ее
+          использование в коде.
+        </p>
+        <p class="paragraph margin-bottom-20px">
+          3. <span class="text-strong">Избегание ошибок:</span> Правильные имена
+          могут помочь избежать ошибок в коде. Например, если вы правильно
+          назовете переменную, описывающую текущий пользовательский ввод, будет
+          проще избежать путаницы при работе с этим значением.
+        </p>
+
+        <h3 class="title-therd margin-bottom-10px">
+          Лучшие практики при выборе имен
+        </h3>
+        <p class="paragraph margin-bottom-10px">
+          <span class="text-strong">&bull; Описательность:</span> Используйте
+          имена, которые ясно описывают предназначение переменной или элемента
+          кода.
+        </p>
+        <p class="paragraph margin-bottom-10px">
+          <span class="text-strong"
+            >&bull; Используйте
+            <a class="link" href="https://ru.wikipedia.org/wiki/CamelCase"
+              >camelCase:</a
+            ></span
+          >
+          Для имен переменных в JavaScript принято использовать camelCase
+          (начиная с маленькой буквы, каждое новое слово с заглавной).
+        </p>
+        <p class="paragraph margin-bottom-10px">
+          <span class="text-strong">&bull; Избегайте сокращений:</span> Полные
+          имена переменных предпочтительнее сокращений, если только сокращение
+          не широко распространено и понятно всем разработчикам.
+        </p>
+        <p class="paragraph margin-bottom-20px">
+          <span class="text-strong">&bull; Используйте английский язык:</span>
+          Для имен переменных используйте английский язык, чтобы ваш код был
+          более доступен для международного сообщества разработчиков.
+        </p>
+
+        <p class="paragraph margin-bottom-10px">Примеры:</p>
+        <p class="paragraph margin-bottom-20px">
+          <span class="text-strong">1.Плохо:</span>
+        </p>
+        <div class="code-example">
+          <div class="code-box margin-bottom-30px">
+            <div class="column-numbers">
+              <span class="line-numbers-rows"
+                ><span>1</span><span>2</span></span
+              >
+            </div>
+            <div class="code-text">
+              <pre>
+<code class="language-markup"><code class="token-variables">let</code> a <code class="token-variables">=</code> <code class="token-number">10</code>; <code class="token-comment">// что представляет собой "a"?</code></code>
+<code class="language-markup"><code class="token-variables">let</code> usrNm <code class="token-variables">=</code> <code class="text-in-code">'John'</code>; <code class="token-comment">// cлишком сокращенное имя переменной</code></code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <p class="paragraph margin-bottom-20px">
+          <span class="text-strong">2.Хорошо:</span>
+        </p>
+        <div class="code-example">
+          <div class="code-box margin-bottom-30px">
+            <div class="column-numbers">
+              <span class="line-numbers-rows"
+                ><span>1</span><span>2</span></span
+              >
+            </div>
+            <div class="code-text">
+              <pre>
+<code class="language-markup"><code class="token-variables">let</code> itemCount <code class="token-variables">=</code> <code class="token-number">10</code>; <code class="token-comment">// ясное описание переменной</code></code>
+<code class="language-markup"><code class="token-variables">let</code> userName <code class="token-variables">=</code> <code class="text-in-code">'John'</code>; <code class="token-comment">// описательное имя переменной.</code></code>
+</pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box margin-bottom-20px">
+          <div class="info-box__title-box margin-bottom-10px">
+            <img
+              class="info-box__img margin-right-10px"
+              src="icons/icon-info.svg"
+              alt=""
+            />
+            <h3 class="title-therd">На заметку:</h3>
+          </div>
+          <p class="paragraph margin-bottom-15px">
+            Выбирая правильные имена для ваших переменных и других элементов
+            кода, вы сделаете свой код более понятным и удобным для работы.
+            Помните, что хорошие имена - это инвестиция в читаемость и
+            поддерживаемость вашего кода.
+          </p>
+        </div>
+        <hr class="block-line" />
+        <div class="tasks">
+          <div class="tasks__box margin-bottom-15px">
+            <i class="tasks__icon bx bxs-check-circle margin-right-5px"></i>
+            <h2 class="title-secondary">Задачи</h2>
+          </div>
+          <div class="level-1">
+            <button class="btn-below margin-bottom-15px">Уровень 1</button>
+            <div class="tasks-list level-1-tasks" style="display: none">
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-5px">
+                  Каким ключевым словом объявляется переменная в JavaScript?
+                </p>
+                <input class="check-mark" type="radio" name="q1" value="a" /> a)
+                var<br />
+                <input class="check-mark" type="radio" name="q1" value="b" /> б)
+                let<br />
+                <input class="check-mark" type="radio" name="q1" value="c" /> в)
+                const<br />
+                <input class="check-mark" type="radio" name="q1" value="d" /> г)
+                Все вышеперчисленные<br />
+                <button class="check-btn" data-correct="d">Проверить</button>
+              </div>
+            </div>
+          </div>
+          <div class="level-2">
+            <button class="btn-below margin-bottom-15px">Уровень 2</button>
+            <div class="tasks-list level-2-tasks" style="display: none">
+              <div class="question margin-bottom-20px">
+                <p class="paragraph margin-bottom-10px">
+                  Заполните пропуски, чтобы объявить переменные в JavaScript.
+                </p>
+                <div class="code-example no-magin">
+                  <div class="code-box margin-bottom-30px">
+                    <div class="column-numbers">
+                      <span class="line-numbers-rows"
+                        ><span>1</span><span>2</span><span>3</span></span
+                      >
+                    </div>
+                    <div class="code-text">
+                      <pre>
+<code class="language-markup"><code class="token-variables">let</code> name <code class="token-variables">=</code> <code class="text-in-code">'John'</code>;</code>
+<code class="language-markup">___ age <code class="token-variables">=</code> <code class="token-number">30</code>;</code>      
+<code class="language-markup"><code class="token-variables">const</code> ___ <code class="token-variables">=</code> <code class="text-in-code">'New York'</code>;</code>      
+</pre>
+                    </div>
+                  </div>
+                </div>
+                <textarea
+                  class="paragraph entering-code margin-bottom-10px"
+                  id="code"
+                  rows="4"
+                  cols="50"
+                >
+// Ваш JavaScript код здесь</textarea
+                ><br />
+                <button class="btn-below-code check-btn__code">
+                  Узнать правильный ответ
+                </button>
+                <div class="tasks-list level-2-tasks" style="display: none">
+                  <div class="code-example" style="margin: 0">
+                    <div class="code-box margin-bottom-30px">
+                      <div class="column-numbers">
+                        <span class="line-numbers-rows"
+                          ><span>1</span><span>2</span><span>3</span></span
+                        >
+                      </div>
+                      <div class="code-text">
+                        <pre>
+<code class="language-markup"><code class="token-variables">let</code> name <code class="token-variables">=</code> <code class="text-in-code">'John'</code>;</code>
+<code class="language-markup"><code class="token-variables">var</code> age <code class="token-variables">=</code> <code class="token-number">30</code>;</code>      
+<code class="language-markup"><code class="token-variables">const</code> city <code class="token-variables">=</code> <code class="text-in-code">'New York'</code>;</code>      
+</pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="level-3">
+              <button class="btn-below margin-bottom-15px">Уровень 3</button>
+              <div class="tasks-list level-3-tasks" style="display: none">
+                <div class="question margin-bottom-20px">
+                  <p class="paragraph margin-bottom-10px">
+                    Напишите JavaScript код, который:
+                  </p>
+                  <p class="paragraph margin-bottom-10px">
+                    1. Объявляет переменную
+                    <code class="text-highlighting">x</code> со значением 10.
+                  </p>
+                  <p class="paragraph margin-bottom-10px">
+                    2. Объявляет переменную
+                    <code class="text-highlighting">y</code> со значением 20.
+                  </p>
+                  <p class="paragraph margin-bottom-10px">
+                    3. Объявляет константу
+                    <code class="text-highlighting">z</code> со значением
+                    <code class="text-highlighting">x + y</code>.
+                  </p>
+                  <p class="paragraph margin-bottom-10px">
+                    4. Выводит значение <code class="text-highlighting">z</code>
+                  </p>
+                  <textarea
+                    class="paragraph entering-code margin-bottom-10px"
+                    id="code-2"
+                    rows="4"
+                    cols="50"
+                  >
+  // Ваш JavaScript код здесь</textarea
+                  ><br />
+                  <button class="btn-below-code check-btn__code">
+                    Узнать правильный ответ
+                  </button>
+                  <div class="tasks-list level-2-tasks" style="display: none">
+                    <div class="code-example" style="margin: 0">
+                      <div class="code-box margin-bottom-30px">
+                        <div class="column-numbers">
+                          <span class="line-numbers-rows"
+                            ><span>1</span><span>2</span><span>3</span
+                            ><span>4</span></span
+                          >
+                        </div>
+                        <div class="code-text">
+                          <pre>
+<code class="language-markup"><code class="token-variables">let</code> x <code class="token-variables">=</code> <code class="token-number">10</code>;</code>
+<code class="language-markup"><code class="token-variables">let</code> y <code class="token-variables">=</code> <code class="token-number">20</code>;</code>      
+<code class="language-markup"><code class="token-variables">const</code> z <code class="token-variables">=</code> x + y;</code>      
+<code class="language-markup"><code class="token-function">console</code>.<code class="text-in-code">log</code>(z); <code class="token-comment">// 30</code></code>       
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="transition-navigate">
+            <a href="2.1 Welcome-to-js.html" class="btn-text">
+              &larr; Добро пожаловать в js
+            </a>
+            <a href="2.3 datatypes.html" class="btn-text">Типы данных &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="main"></div>
+    </div>
+    <script src="js/code-to-copy1.js"></script>
+    <script src="js/_btn-below.js"></script>
+    <script src="js/answer-option.js"></script>
+    <script src="js/js-tasks-code/script-task1.js"></script>
+  </body>
+</html>
+
+<!-- <div class="code-example">
+  <div class="code-box">
+    <div class="codebox__code" data-code="1">
+      <pre
+        class="line-numbers language-markup"
+        tabindex="0"
+      ><span class="line-numbers-rows"><span>1</span><span>2</span><span>3</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+
+      <code class=" language-markup"><code class="token doctype"><code class="token punctuation">&lt;!</code><code class="token doctype-tag">DOCTYPE</code> <code class="token name">HTML</code><code class="token punctuation">&gt;</code></code>
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>html</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>p</code><code class="token punctuation">&gt;</code></code>Перед скриптом...<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>p</code><code class="token punctuation">&gt;</code></code>
+
+<em class="block-highlight">  <code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>script</code><code class="token punctuation">&gt;</code></code><code class="token script"><code class="token language-javascript">
+<code class="token function">alert</code><code class="token punctuation">(</code> <code class="token string">'Привет, мир!'</code> <code class="token punctuation">)</code><code class="token punctuation">;</code>
+</code></code><code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>script</code><code class="token punctuation">&gt;</code></code></em>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;</code>p</code><code class="token punctuation">&gt;</code></code>...После скрипта.<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>p</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>body</code><code class="token punctuation">&gt;</code></code>
+
+<code class="token tag"><code class="token tag"><code class="token punctuation">&lt;/</code>html</code><code class="token punctuation">&gt;</code></code></code></pre>
+
+
+    </div>
+  </div> -->
+<!-- <div class="code-result code-example__result">
+    <iframe
+      name="c6uhwvacl2"
+      class="code-result__iframe"
+      style="height: 100px"
+      src="./Привет, мир!_files/saved_resource.html"
+    ></iframe>
+  </div>
+</div> -->

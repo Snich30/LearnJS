@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Learning JavaScript</title>
+  </head>
+  <body>
+    <!-- <div id="result"></div> -->
+    <div class="container_pages">
+      <section class="section-introduction">
+        <a href="home-page.html"><img class="main-icon" src="video/output-js.gif" alt="" /></a>
+        <div class="interactive-platform margin-bottom-30px">
+          <h1 class="title-first margin-bottom-10px">
+            Вступление в мир JavaScript
+          </h1>
+          <p class="paragraph margin-bottom-30px">
+            JavaScript является одним из наиболее распространенных и
+            востребованных языков программирования в мире веб-разработки. В этом
+            разделе мы погружаемся в мир JavaScript, изучая его историю,
+            ключевые возможности и преимущества, а также его важную роль в
+            современной веб-разработке.
+          </p>
+
+          <h2 class="title-secondary margin-bottom-10px">
+            Что такое JavaScript?
+          </h2>
+          <div class="Explanation">
+            <p class="paragraph margin-bottom-20px">
+              <span class="text-underlined text-strong">JavaScript (JS)</span> -
+              это высокоуровневый язык программирования для создания
+              интерактивных веб-страниц. Он используется для манипуляции
+              <a
+                class="link"
+                href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics"
+                >HTML</a
+              >-элементами, обработки событий, отправки запросов к серверу без
+              перезагрузки страницы
+              <a class="link" href="https://ru.wikipedia.org/wiki/AJAX"
+                >(AJAX)</a
+              >, создания анимаций и многое другое.
+            </p>
+            <div class="info-box margin-bottom-20px">
+              <div class="info-box__title-box margin-bottom-10px">
+                <img
+                  class="info-box__img margin-right-10px"
+                  src="icons/icon-info.svg"
+                  alt=""
+                />
+                <h3 class="title-therd">JavaScript это не Java</h3>
+              </div>
+              <p class="paragraph">
+                JavaScript (JS) и
+                <a class="link" href="https://ru.wikipedia.org/wiki/Java"
+                  >Java</a
+                >
+                - это два различных языка программирования с разными историями,
+                целями и областями применения.
+              </p>
+            </div>
+          </div>
+          <div class="role margin-bottom-20px">
+            <h2 class="title-secondary margin-bottom-15px">
+              Роль JavaScript в веб-разработке
+            </h2>
+            <p class="paragraph margin-bottom-15px">
+              JavaScript играет решающую роль в создании интерактивных и
+              динамических веб-приложений. Он используется для добавления
+              функциональности на стороне клиента, обеспечивая взаимодействие
+              пользователя с веб-страницей без необходимости перезагрузки
+              страницы.
+            </p>
+            <p class="paragraph margin-bottom-15px">
+              JavaScript также широко используется на стороне сервера с помощью
+              платформы
+              <a class="link" href="https://doka-guide.vercel.app/tools/nodejs/"
+                >Node.js</a
+              >, что позволяет создавать мощные и масштабируемые веб-приложения.
+            </p>
+            <p class="paragraph margin-bottom-10px">
+              Однако JavaScript может выполняться не только в браузере, но и на
+              сервере или на любом другом устройстве, которое имеет специальную
+              программу, называющуюся "движком" JavaScript и браузера есть
+              собственный движок
+            </p>
+            <p class="paragraph margin-bottom-10px">
+              Разные движки имеют разные "кодовые имена". Например:
+            </p>
+            <p class="paragraph margin-bottom-20px">
+              &bull;
+              <a
+                class="link"
+                href="https://ru.wikipedia.org/wiki/V8_(движок_JavaScript)"
+                >V8</a
+              >
+              – в Chrome, Opera и Edge. <br />&bull;
+              <a class="link" href="https://ru.wikipedia.org/wiki/SpiderMonkey"
+                >SpiderMonkey</a
+              >
+              – в Firefox. <br />&bull; Ещё есть "Chakra" для IE,
+              "JavaScriptCore", "Nitro" и "SquirrelFish" для Safari и т.д.
+            </p>
+            <div class="info-box ">
+              <div class="info-box__title-box margin-bottom-10px">
+                <img
+                  class="info-box__img margin-right-10px"
+                  src="icons/icon-info.svg"
+                  alt=""
+                />
+                <h3 class="title-therd">Как работают движки?</h3>
+              </div>
+              <p class="paragraph margin-bottom-10px">
+                Движки сложны. Но основы понять легко.
+              </p>
+              <p class="paragraph margin-bottom-20px">
+                1. Движок (встроенный, если это браузер) читает («парсит») текст
+                скрипта. <br />
+                2. Затем он преобразует («компилирует») скрипт в машинный язык.
+                <br />
+                3. После этого машинный код запускается и работает достаточно
+                быстро.
+              </p>
+              <p class="paragraph ">
+                Движок применяет оптимизации на каждом этапе. Он даже
+                просматривает скомпилированный скрипт во время его работы,
+                анализируя проходящие через него данные, и применяет оптимизации
+                к машинному коду, полагаясь на полученные знания. В результате
+                скрипты работают очень быстро.
+              </p>
+            </div>
+
+            <p class="paragraph margin-bottom-10px">
+              JavaScript может выполнять следующие роли:
+            </p>
+            <p class="paragraph margin-bottom-5px">
+              &bull;
+              <span class="text-underlined">Изменение контента и стилей:</span>
+              Добавление, изменение и удаление HTML-элементов на странице, а
+              также изменение их стилей.
+            </p>
+            <p class="paragraph margin-bottom-5px">
+              &bull;
+              <span class="text-underlined"
+                >Реакция на действия пользователя:</span
+              >Обработка событий, таких как щелчки мыши, нажатия клавиш,
+              отправка форм, и изменение содержимого страницы в ответ на эти
+              действия.
+            </p>
+            <p class="paragraph margin-bottom-5px">
+              &bull;
+              <span class="text-underlined">Взаимодействие с сервером:</span>
+              Отправка асинхронных запросов на сервер (AJAX), загрузка данных
+              без перезагрузки страницы, отправка форм, загрузка файлов и другие
+              операции связанные с сетью.
+            </p>
+            <p class="paragraph margin-bottom-5px">
+              &bull;
+              <span class="text-underlined">Управление куками:</span> Установка,
+              получение и удаление куков на стороне клиента для хранения
+              информации между сессиями.
+            </p>
+            <p class="paragraph margin-bottom-5px">
+              &bull;
+              <span class="text-underlined">Работа с браузером:</span>
+              Управление размером и положением окна браузера, создание
+              всплывающих окон и другие действия, связанные с интерфейсом
+              браузера.
+            </p>
+            <p class="paragraph">
+              &bull;
+              <span class="text-underlined">Анимация и визуализация:</span>
+              Создание анимаций, визуальных эффектов и прочих интерактивных
+              элементов, делающих страницу более привлекательной для
+              пользователя.
+            </p>
+          </div>
+          <div class="feature-js">
+            <h2 class="title-secondary margin-bottom-10px">
+              В чём особенность JavaScript
+            </h2>
+            <p class="paragraph margin-bottom-10px">
+              Как миниму,
+              <span class="text-italic">три сильные стороны</span> JavaScript
+            </p>
+            <div class="highlighted-box margin-bottom-10px">
+              <li class="point-paragraph">
+                <span>Полная интеграция с HTML/CSS</span>
+              </li>
+              <li class="point-paragraph">
+                <span>Простые вещи делаются просто</span>
+              </li>
+              <li class="point-paragraph">
+                <span
+                  >Поддердивается всеми основными браузерами и включён по
+                  умолчанию</span
+                >
+              </li>
+            </div>
+            <p class="paragraph margin-bottom-10px">
+              <span class="text-strong">JavaScript</span> – это единственная
+              браузерная технология, сочетающая в себе все эти три вещи.
+            </p>
+            <p class="paragraph">
+              Хотя, конечно, JavaScript позволяет делать приложения не только в
+              браузерах, но и на сервере, на мобильных устройствах и т.п.
+            </p>
+          </div>
+        </div>
+        <div class="transition-navigate">
+          <a href="home-page.html" class="btn-text"> &larr; На главную </a>
+          <a href="1.2 code-editor.html" class="btn-text">Редакторы кода &rarr;</a>
+        </div>
+      </section>
+      
+
+      <div class="main"></div>
+
+      <script src="js/printable_text.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+
+    
+.btn
+    &:link, &:visited
+        @include style-link($color-black)
+        position: relative
+        padding: 1.5rem 4rem
+        font-size: $font-size-paragraph-h3
+        font-weight: 500
+        border-radius: 5rem
+        background: $color-moon
+        transition: all .7s     
+    &:hover
+        transform: translateY(-3px)
+        box-shadow: $box-shadow
+        &::after
+            opacity: 0
+
+            transform: scaleX(1.5) scaleY(1.7)      
+    &:active
+        transform: translateY(-1px)
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1)
+    &::after
+        content: ''
+        background-color: $color-moon
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        display: inline-block 
+        position: absolute
+        top: 0
+        left: 0    
+        z-index: -1
+        transition: all 0.7s
+    &_animatedUp
+        animation: BtnToUp 1s ease-out 2.1s
+        animation-fill-mode: backwards
